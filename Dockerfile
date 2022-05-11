@@ -100,13 +100,13 @@ RUN set -eux; \
         echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list; \
         \
         # Add Heroku APT repository
-        curl -sSL https://cli-assets.heroku.com/apt/release.key | gpg --dearmor > /etc/apt/trusted.gpg.d/apt.heroku.com.gpg; \
-        echo "deb https://cli-assets.heroku.com/branches/stable/apt ./" > /etc/apt/sources.list.d/heroku.list; \
+        # curl -sSL https://cli-assets.heroku.com/apt/release.key | gpg --dearmor > /etc/apt/trusted.gpg.d/apt.heroku.com.gpg; \
+        # echo "deb https://cli-assets.heroku.com/branches/stable/apt ./" > /etc/apt/sources.list.d/heroku.list; \
         \
         # Install everything
         apt-get update; \
         apt-get install --assume-yes --no-install-recommends --no-install-suggests \
-          heroku \
+          #heroku \
           jq \
           nano \
           nodejs \
