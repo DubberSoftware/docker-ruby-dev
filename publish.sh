@@ -8,9 +8,9 @@ fi
 set -ev
 
 # Publish default name
-docker push alpinelab/ruby-dev:${RUBY_IMAGE_TAG}
+docker push dubber/ruby-dev:${RUBY_IMAGE_TAG}
 
 # Publish aliases
 for alias in ${ALIAS_TAGS//,/ }; do
-  docker push alpinelab/ruby-dev:${alias}
+  docker push dubber/ruby-dev:${alias}
 done
